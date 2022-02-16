@@ -16,7 +16,7 @@ then
    echo "" 
 elif [ ! -d "recon" ]
 then
-    mkdir recon
+    sudo mkdir recon
 fi
 
 if [ -d "tools"  ]
@@ -24,7 +24,7 @@ then
    echo "" 
 elif [ ! -d "tools" ]
 then
-    mkdir tools
+   sudo mkdir tools
 fi
 
 jq=$(dpkg-query -W --showformat='${Status}\n' jq | grep "install ok installed")
